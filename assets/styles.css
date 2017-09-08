@@ -12,3 +12,8 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
+
+canvas:hover{
+  cursor: crosshair;
+}
