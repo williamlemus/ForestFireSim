@@ -3,18 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Forest Fire Sim</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel='stylesheet' media='all' href='./assets/styles.css'>
+    <script src="https://use.fontawesome.com/c2c3c80783.js"></script>
     <script src="./lib/bundle.js"></script>
 
   </head>
   <body>
-    <nav><h2>Only you can stop(or start) forest fires!</h2>
-      <h3>Click on a tree on the map or <button id='random-button'>Pick for me</button></h3>
-      <h4><button id='reset-button'>Reset Map</button></h4>
+    <nav><h2>Forest Fire Sim</h2>
+      <h3>Click on a tree on the map to start a fire. It will spread randomly.<span><button id='random-button'>Pick for me</button><button id='reset-button'>Reset Map</button>
+      </span></h3>
     </nav>
     <canvas id='canvas' width=1680 height=960 ></canvas>
-    <select id='probablility'>
-      <<option default disabled> Wees</option>
-    </select>
+    <nav class='more-info-links'>
+      <a href='https://linkedin.com/in/williamlemus'>
+        <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+      </a>
+      <a href='https://github.com/williamlemus/ForestFireSim'>
+        <i class="fa fa-github-square fa-3x" aria-hidden="true"></i>
+      </a>
+      <span>Personal Site</span>
+    </nav>
   </body>
 </html>
