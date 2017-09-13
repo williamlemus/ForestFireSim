@@ -11,9 +11,18 @@
   </head>
   <body>
     <nav><h2>Forest Fire Sim</h2>
-      <h3>Click on a tree on the map to start a fire. It will spread randomly.
+      <h3>Click on a tree on the map to start a fire.
         <span><label for='probablility'>% that fire will spread:</label>
           <input id='probablility' type=number min=0 max=100 value=50></input>
+        </span>
+        <span><label for='wind-direction'>Wind Direction:</label>
+          <select id='wind-direction'>
+            <option default>None</option>
+            <option >North</option>
+            <option >South</option>
+            <option >East</option>
+            <option >West</option>
+          </select>
         </span>
         <span>
           Trees burned: <span id='num-burned'>0</span>
