@@ -13,10 +13,13 @@
     <nav><h2>Forest Fire Sim</h2>
       <h3>Click on a tree on the map to start a fire. It will spread randomly.
         <span><label for='probablility'>% that fire will spread:</label>
-          <input id='probablility' type=number min=0 max=100></input>
+          <input id='probablility' type=number min=0 max=100 value=50></input>
         </span>
         <span>
           Trees burned: <span id='num-burned'>0</span>
+        </span>
+        <span>
+          Forest remaining: <span id='forest-remaining'>100</span>%
         </span>
         <span><button id='random-button'>Pick for me</button><button id='reset-button'>Reset Map</button>
       </span></h3>
