@@ -6,21 +6,37 @@ h3, body {
 
 
 body {
-  background-color: whitesmoke;
   width: 1680px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  background: linear-gradient(135deg, #8CAF81, whitesmoke);
 }
 
 h3, .more-info-links{
   display: flex;
   justify-content: space-between;
+  font-size: 15px;
+}
+
+h3{
+  align-items: flex-end;
+}
+
+.more-info-links{
+  align-items: flex-start;
+}
+h4{
+  margin: 0;
+}
+
+h2{
+  margin: 10px 0 4px 0;
+  font-size: 21px;
 }
 
 canvas{
-  margin: 10px 0 10px 0;
+  margin-top: 15px;
 }
 
 canvas:hover{
@@ -29,7 +45,8 @@ canvas:hover{
 }
 
 button{
-  font-size: 20px;
+  height: 24px;
+  font-size: 16px;
   border-radius: 5px;
   padding: 2px 10px 2px 10px;
   color: white;
