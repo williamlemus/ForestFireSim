@@ -50,14 +50,20 @@ input {
 
 #reset-button{
   background-color: blue;
-
 }
+
 #reset-button:hover{
   background-color: lightblue;
 }
+
 #random-button{
   background-color: red;
 }
+
 #random-button:hover{
   background-color: pink;
+}
+
+#num-burned{
+  transition-timing-function: steps(4, end);
 }
