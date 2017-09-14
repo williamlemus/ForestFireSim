@@ -4,7 +4,6 @@ h3, body {
   font-family: 'Roboto', sans-serif;
 }
 
-
 body {
   width: 1680px;
   display: flex;
@@ -21,28 +20,38 @@ h3, .more-info-links{
 
 h3{
   align-items: flex-end;
+  margin-bottom: 15px;
 }
 
 .more-info-links{
-  align-items: flex-start;
+  font-size: 20px;
+  margin-top: 8px;
 }
+
 h4{
   margin: 0;
 }
+
 
 h2{
   margin: 10px 0 4px 0;
   font-size: 21px;
 }
 
-canvas{
-  margin-top: 15px;
-}
-
 canvas:hover{
   cursor: crosshair;
 
 }
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover{
+  color: green;
+}
+
 
 button{
   height: 24px;
