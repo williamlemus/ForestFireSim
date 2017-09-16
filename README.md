@@ -1,43 +1,44 @@
-# Forest Fire Sim
+# ForestFireSim
+
+[ForestFireSim live](https://williamlemus.github.io/ForestFireSim/)
+
+![Sample Fire](https://github.com/williamlemus/ForestFireSim/blob/master/docs/images/NoWind.gif "Sample Fire")
 
 ### Background
 Wildfire modeling is used to help predict where to allocate resources to protect ecological environments.
 
-The version that this simulation will create will be an example of cellular automata.
+This simulation will create will be an example of cellular automata. It is written in JavaScript and uses Canvas for 2D rendering.
 
-The rules for in the system are as follows:
+### How to use
 
+A point can be selected on the map; if there is a tree on that cell, a fire will start to spread. The percentage of fire spread and wind direction can be chosen to affect how the fire will spread. By default, it is set to 50%.
 
+The 'Pick for me' button can also be pressed to start a fire at a random location.
 
-### Functionality & MVP
-In this Forest Fire Sim, users will be able to:
-- [ ] Start and reset the simulation
-- [ ] Select a point where to start the fire, or have the program select a random starting point
-- [ ] Modify probabilities and speed at which the fire spreads.
-- [ ] Allow user to set percentage of forest that will contain trees.
+### Features
+#### Random fire location
+The user can let the map pick it's own cell on the canvas. This is done by checking if the location has a tree, and proceeding to start the simulation.
 
-Additionally, this project will include:
-- [ ] Instructions on how to control the simulation
-- [ ] A production README
+``` JS
+handleRandomClick(){
+  let randLocation = [Math.floor(Math.random()*ROWS), Math.floor(Math.random()*COLS)]
+  this.getPreferences();
+  while(!this.grid[randLocation[0]][randLocation[1]].tree()){
+    randLocation = [Math.floor(Math.random()*ROWS), Math.floor(Math.random()*COLS)]
+  }
+  this.burningTrees.push(randLocation);
+  this.startBurn();
+}
+```
 
-### Architecture and Technology
-This project will be implemented in JavaScript.
+#### Wind direction
 
-### Implementation Timeline
-**Day 1**: Setup all necessary Node modules(if required), including getting webpack up and running. Create a basic outline of the entry file and the bare bones of any files that are required. Research the basics on how cellular automata rules can be implemented.
+Wind direction is modified by increasing the probability the fire will spread in the direction of the fire, while at the same time decreasing the probability in every other direction. Also, the animation is sped up to show a faster spreading fire.
 
-**Day 2**: Setup individual cell states. Ensure these states are rendered correctly.
+Fire with a eastern wind direction:
 
-**Day 3**: Setup the logic for the automata. Ensure that all grid states changes are handled correctly. Make sure this logic is incorporated with the render logic.
+![Sample Fire](https://github.com/williamlemus/ForestFireSim/blob/master/docs/images/EastWind.gif "Sample Fire East")
 
-**Day 4**: Complete controls for user to interact with simulation. Ensure user can reset and modify probabilities correctly.
+Fire with a western wind direction:
 
-
-### Bonus features
-
-Wildfire modeling has many avenues for exploration. Some updates that will be done once the base simulation is complete are:
-- [ ] Factor in wind(and let user modify parameter)
-- [ ] Enabled probability that tree may regrow
-- [ ] Allow multiple fires to occur at once.
-- [ ] Have cells that cannot catch on fire or grow trees
-- [ ] Have a set of predefined states
+![Sample Fire](https://github.com/williamlemus/ForestFireSim/blob/master/docs/images/WestWind.gif "Sample Fire West")
